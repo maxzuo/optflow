@@ -2,7 +2,17 @@ import cv2
 from ..flow import to_polar
 import numpy as np
 
-def flowHSV(flow):
+def flowHSV(flow:np.ndarray) -> np.ndarray:
+    """
+    Produces HSV visualization (converted to BGR color space for display)
+    of normalized flow
+
+    Inputs:
+    - flow
+
+    Outputs:
+    - hsv
+    """
     mag, ang = to_polar(flow)
     h,w,*_ = mag.shape
 
