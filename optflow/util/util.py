@@ -8,7 +8,7 @@ except:
     # dummy tqdm object
     tqdm = lambda a, **k: a
     tqdm.update = lambda a: None
-    if not environ['optflow_warning'] == 'SUPPRESS':
+    if "optflow_warning" not in environ or not environ['optflow_warning'] == 'SUPPRESS':
         print("Note: tqdm not installed. Install tqdm module to display progress bars.", file=stderr)
 
 

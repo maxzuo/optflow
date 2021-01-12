@@ -2,7 +2,7 @@ import setuptools
 import sys
 
 def get_requirements():
-    requirements = ['numpy', 'matplotlib', 'scikit-learn', 'tqdm']
+    requirements = ['numpy', 'matplotlib', 'scikit-learn']
     # check if opencv is built from source and exists:
     if sys.version_info < (3,0):
         print("Package does not support python2", file=sys.stderr)
